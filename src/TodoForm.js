@@ -1,17 +1,17 @@
 import React, {useState} from 'react'
 
-export default function TodoForm(todo) {
+export default function TodoForm({todo, insertTodo}) {
 
     const [currTodo, setcurrTodo] = useState({
         title:"",
-        ID:"",
+        id:"",
         tag:"",
         timeDue:""
     })
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log(currTodo)
+        insertTodo(currTodo)
     }
 
     
@@ -19,7 +19,7 @@ export default function TodoForm(todo) {
         <div>
             <form onSubmit={handleSubmit}>
                 <input type = "text" value = {currTodo.title} onChange={(e) => setcurrTodo(e.target.value)} />  {/* i have a feeling this may be wrong. are setting the state to just the value? */}
-                <input type = "submit" value =""></input>
+                <input type = "submit" value ="Insert Todo"></input>
             </form>
             
         </div>
