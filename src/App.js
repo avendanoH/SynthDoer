@@ -5,8 +5,8 @@ import TodoForm from "./TodoForm"
 function App() {
   const [todo, settodo] = useState("")
 
-function insertTodo(title) {
-  settodo([todo,...todo])
+function insertTodo(t) {
+  settodo([t,...todo])
 }
 
 

@@ -11,19 +11,25 @@ export default function TodoForm({insertTodo}) {
         Completed: false
     })
 
-    const handleSubmit = (e) =>{
+    function handleChange(e){
+        setcurrTodo({...currTodo,title:e.target.value})
+    }
+
+
+    function handleSubmit(e){
         e.preventDefault();
-        if(currTodo.title.trim){
+        if(currTodo.title.trim()){
             insertTodo({...currTodo,id: uuidv4()})
             setcurrTodo({...currTodo,title:''})
-}
+        }
     }
+
 
     
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type = "text" value = {currTodo.title} onChange={(e) => setcurrTodo(e.target.value)} />  {/* i have a feeling this may be wrong. are setting the state to just the value? */}
+                <input type = "text" value = {currTodo.title} onChange={handleChange}/>
                 <input type = "submit" value ="Insert Todo"></input>
             </form>
             <Todo todo={currTodo}/>
