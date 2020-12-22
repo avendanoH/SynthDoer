@@ -19,13 +19,16 @@ function App() {
     setTodo([t,...todo]);
   }
 
+  function removeTodo(id){
+    setTodo(todo.filter(t=>t.id !== id))
+  }
 
 
     return (
       <div>
       <div className="App"> Hello World This is a todo app</div>
       <TodoForm insertTodo ={insertTodo}/>
-      <TodoList todo={todo}/>
+      <TodoList todo={todo} removeTodo={removeTodo}/>
       </div>
     );
 }

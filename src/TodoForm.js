@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
-import TodoList from './TodoList';
 export default function TodoForm({ insertTodo }) {
 
     const [currTodo, setcurrTodo] = useState({
