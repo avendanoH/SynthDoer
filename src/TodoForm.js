@@ -28,7 +28,7 @@ export default function TodoForm({ insertTodo }) {
     return (
             <form onSubmit={handleSubmit}>
                 <input type="text" value={currTodo.title} onChange={handleChange} />
-                <input type="submit" value="Insert Todo"></input>
+                <input type="submit" value="Do it"></input>
             </form>
     )
 }

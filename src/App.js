@@ -5,6 +5,8 @@ import "./App.css";
 
 
 function App() {
+  const curr = new Date()
+  const date = `${curr.getDate()}/${curr.getMonth()+1}/${curr.getFullYear()}`;
   const [todo, setTodo] = useState([]);
 
   useEffect(() => {
@@ -27,7 +29,8 @@ function App() {
       todo.map(t => {
         if (t.id === id) {
           return {
-            ...t, isComplete: !t.isComplete
+            ...t,
+            isComplete: !t.isComplete
           };
         }
         return t
@@ -39,7 +42,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Todo List</p>
+        <p>{date}</p>
+        <p>Your Todo List</p>
         <TodoForm insertTodo={insertTodo} />
         <TodoList
           todo={todo}
