@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 export default function Todo({todo,removeTodo,toggleIsComplete}) {
     function handleRemClick(){removeTodo(todo.id)}
