@@ -6,15 +6,17 @@ export default function Todo({todo,removeTodo,toggleIsComplete}) {
     function handleCompleteToggle(){ toggleIsComplete(todo.id)}
     
     return (
-        <div style={{display:"flex"}}>
-            <input type= "checkbox" onClick={handleCompleteToggle}/>
+        <div style={{display: "flex"}}>
+            <input type="checkbox" onClick={handleCompleteToggle}/>
             <li
                 style={{
-                    color:"black",
+                    color:'white',
                     textDecoration: todo.toggleIsComplete ? "line-through" : null
                 }}
+
                 >
                     {todo.title}
+
                     </li>
                     <button onClick={handleRemClick}>X</button> 
             </div>
