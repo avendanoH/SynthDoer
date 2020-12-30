@@ -59,7 +59,7 @@ function App() {
         width: '100%',
         left: '50%',
         top: '50%',
-        height:'100%',
+        height:'125%',
         objectFit: 'cover',
         transform: 'translate(-50%,-50%)',
         zIndex: '-2'
