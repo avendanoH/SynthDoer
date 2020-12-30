@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SynthDoer/static/css/main.e5232c2f.chunk.css",
-    "main.js": "/SynthDoer/static/js/main.f2ecdde2.chunk.js",
-    "main.js.map": "/SynthDoer/static/js/main.f2ecdde2.chunk.js.map",
+    "main.js": "/SynthDoer/static/js/main.1a23dfaf.chunk.js",
+    "main.js.map": "/SynthDoer/static/js/main.1a23dfaf.chunk.js.map",
     "runtime-main.js": "/SynthDoer/static/js/runtime-main.d08d473d.js",
     "runtime-main.js.map": "/SynthDoer/static/js/runtime-main.d08d473d.js.map",
     "static/js/2.7fbb7060.chunk.js": "/SynthDoer/static/js/2.7fbb7060.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.d08d473d.js",
     "static/js/2.7fbb7060.chunk.js",
     "static/css/main.e5232c2f.chunk.css",
-    "static/js/main.f2ecdde2.chunk.js"
+    "static/js/main.1a23dfaf.chunk.js"
   ]
 }
