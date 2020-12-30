@@ -1,0 +1,84 @@
+import React, { useState, useEffect } from 'react'
+import TodoForm from "./TodoForm"
+import TodoList from './TodoList'
+import "./App.css";
+import styled from 'styled-components'
+import synthBackground from "./synth-skyline.mp4"  
+import Resonance from "./Resonance.mp3"
+import ReactAudioPlayer from 'react-audio-player'
+
+
+
+
+function App() {
+  const resonance = new Audio(Resonance)
+  const playResonance = () =>{resonance.play()}
+  const curr = new Date()
+  const date = `${curr.getDate()}/${curr.getMonth()+1}/${curr.getFullYear()}`;
+  const [todo, setTodo] = useState([]);
+
+  useEffect(() => {
+    const storedTodo = JSON.parse(localStorage.getItem('todo'));
+    if (storedTodo) { setTodo(storedTodo) }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('todo', JSON.stringify(todo));
+  }, [todo]);
+
+  function insertTodo(t) {
+    setTodo([t, ...todo]);
+  }
+
+  function removeTodo(id) { setTodo(todo.filter(t => t.id !== id)) }
+
+  function toggleIsComplete(id) {
+    setTodo(
+      todo.map(t => {
+        if (t.id === id) {
+          return {
+            ...t,
+            isComplete: !t.isComplete
+          };
+        }
+        return t
+      })
+    );
+  }
+
+
+  return (
+    
+    
+    <div className="App">
+      <ReactAudioPlayer src={Resonance} autoPlay loop controls />
+      <header className="App-header">
+      <video
+      style={{
+        position: 'absolute',
+        width: '100%',
+        left: '50%',
+        top: '50%',
+        height:'100%',
+        objectFit: 'cover',
+        transform: 'translate(-50%,-50%)',
+        zIndex: '-2'
+      }}
+        autoPlay
+        loop
+        muted>
+        <source src = {synthBackground} type="video/mp4"/>
+      </video>
+        <p>{date}</p>
+        <p>Your Todo List</p>
+        <TodoForm insertTodo={insertTodo} />
+        <TodoList
+          todo={todo}
+          removeTodo={removeTodo}
+          toggleIsComplete={toggleIsComplete} />
+      </header>
+    </div>
+    
+  );
+}
+export default App;
