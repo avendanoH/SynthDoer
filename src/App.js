@@ -4,15 +4,14 @@ import TodoList from './TodoList'
 import "./App.css";
 import styled from 'styled-components'
 import synthBackground from "./synth-skyline.mp4"  
-import Resonance from "./Resonance.mp3"
-import ReactAudioPlayer from 'react-audio-player'
+import ReactPlayer from "react-player"
 
 
 
 
 function App() {
-  const resonance = new Audio(Resonance)
-  const playResonance = () =>{resonance.play()}
+  //const resonance = new Audio(Resonance)
+  //const playResonance = () =>{resonance.play()}
   const curr = new Date()
   const date = `${curr.getDate()}/${curr.getMonth()+1}/${curr.getFullYear()}`;
   const [todo, setTodo] = useState([]);
@@ -51,7 +50,8 @@ function App() {
     
     
     <div className="App">
-      <ReactAudioPlayer src={Resonance} autoPlay loop controls />
+      {/* <ReactAudioPlayer src={Resonance} autoPlay loop controls /> */}
+      <ReactPlayer width={320} height={180} url = 'https://soundcloud.com/heriberto-avendano-870485699/sets/synthwave'/>
       <header className="App-header">
       <video
       style={{
