@@ -41,14 +41,16 @@ export default function Todo({ todo, removeTodo, toggleIsComplete }) {
             <input type="checkbox" onClick={handleCompleteToggle} />
             <li
                 style={{
+
                     textDecoration: todo.isComplete ? "line-through" : null
+                    
                 }}
 
             >
                 {todo.title}
 
             </li>
-            <Button onClick={handleRemClick}>Remove</Button>
+            <Button onClick={handleRemClick}>Done it</Button>
         </div>
     );
 }

@@ -3,6 +3,7 @@ import TodoForm from "./TodoForm"
 import TodoList from './TodoList'
 import "./App.css";
 import styled from 'styled-components'
+import synthBackground from "./synth-skyline.mp4"  
 
 
 
@@ -45,6 +46,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <video
+      style={{
+        position: 'absolute',
+        width: '100%',
+        left: '50%',
+        top: '50%',
+        height:'100%',
+        objectFit: 'cover',
+        transform: 'translate(-50%,-50%)',
+        zIndex: '-2'
+      }}
+        autoPlay
+        loop
+        muted>
+        <source src = {synthBackground} type="video/mp4"/>
+      </video>
         <p>{date}</p>
         <p>Your Todo List</p>
         <TodoForm insertTodo={insertTodo} />
