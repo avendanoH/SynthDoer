@@ -1,22 +1,21 @@
 {
   "files": {
     "main.css": "/SynthDoer/static/css/main.e5232c2f.chunk.css",
-    "main.js": "/SynthDoer/static/js/main.790859c7.chunk.js",
-    "main.js.map": "/SynthDoer/static/js/main.790859c7.chunk.js.map",
+    "main.js": "/SynthDoer/static/js/main.f2ecdde2.chunk.js",
+    "main.js.map": "/SynthDoer/static/js/main.f2ecdde2.chunk.js.map",
     "runtime-main.js": "/SynthDoer/static/js/runtime-main.d08d473d.js",
     "runtime-main.js.map": "/SynthDoer/static/js/runtime-main.d08d473d.js.map",
-    "static/js/2.1d479f65.chunk.js": "/SynthDoer/static/js/2.1d479f65.chunk.js",
-    "static/js/2.1d479f65.chunk.js.map": "/SynthDoer/static/js/2.1d479f65.chunk.js.map",
+    "static/js/2.7fbb7060.chunk.js": "/SynthDoer/static/js/2.7fbb7060.chunk.js",
+    "static/js/2.7fbb7060.chunk.js.map": "/SynthDoer/static/js/2.7fbb7060.chunk.js.map",
     "index.html": "/SynthDoer/index.html",
     "static/css/main.e5232c2f.chunk.css.map": "/SynthDoer/static/css/main.e5232c2f.chunk.css.map",
-    "static/js/2.1d479f65.chunk.js.LICENSE.txt": "/SynthDoer/static/js/2.1d479f65.chunk.js.LICENSE.txt",
-    "static/media/Resonance.f3805537.mp3": "/SynthDoer/static/media/Resonance.f3805537.mp3",
+    "static/js/2.7fbb7060.chunk.js.LICENSE.txt": "/SynthDoer/static/js/2.7fbb7060.chunk.js.LICENSE.txt",
     "static/media/synth-skyline.8336e8fb.mp4": "/SynthDoer/static/media/synth-skyline.8336e8fb.mp4"
   },
   "entrypoints": [
     "static/js/runtime-main.d08d473d.js",
-    "static/js/2.1d479f65.chunk.js",
+    "static/js/2.7fbb7060.chunk.js",
     "static/css/main.e5232c2f.chunk.css",
-    "static/js/main.790859c7.chunk.js"
+    "static/js/main.f2ecdde2.chunk.js"
   ]
 }
