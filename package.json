@@ -1,5 +1,6 @@
 {
-  "name": "dailytodo",
+  "homepage": "https://edav7.github.io/SynthDoer/",
+  "name": "SynthDoer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,8 +13,7 @@
     "react-scripts": "4.0.1",
     "styled-components": "^5.2.1",
     "uuid": "^8.3.2",
-    "web-vitals": "^0.2.4",
-    "homepage": "https://edav7.github.io/SynthDoer/"
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
