@@ -1,8 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
+//import {Checkbox} from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles';
+import { green } from '@material-ui/core/colors';
+import "./Checkbox"
+// create synthwave button, complete, line-through using the synth
 
-// create synthwave button, complete, line-through using the synthw
+const HiddenCheckbox = styled.input.attrs({type: 'checkbox'})`
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+`
 
+const Checkbox = props => (<input type="checkbox" {...props }/>)
+
+
+
+
+
+// const GreenCheckbox = withStyles({
+//   root: {
+      
+//     color: green[400],
+//     '&$checked': {
+//       color: green[600],
+//     },
+//   },
+//   checked: {},
+// })((props) => <Checkbox color="default" {...props} />);;
 
 const Button = styled.button`
   background: #ff34b3;
@@ -38,7 +69,7 @@ export default function Todo({ todo, removeTodo, toggleIsComplete }) {
 
     return (
         <div style={{ display: "flex" }}>
-            <input type="checkbox" onClick={handleCompleteToggle} />
+            <GreenCheckbox checked={todo.isComplete} onClick={handleCompleteToggle} />
             <li
                 style={{
 

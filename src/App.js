@@ -12,6 +12,7 @@ import ReactPlayer from "react-player"
 function App() {
   //const resonance = new Audio(Resonance)
   //const playResonance = () =>{resonance.play()}
+  
   const curr = new Date()
   const date = `${curr.getDate()}/${curr.getMonth()+1}/${curr.getFullYear()}`;
   const [todo, setTodo] = useState([]);
