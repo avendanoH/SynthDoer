@@ -13,6 +13,7 @@ function App() {
   //const resonance = new Audio(Resonance)
   //const playResonance = () =>{resonance.play()}
   
+  
   const curr = new Date()
   const date = `${curr.getMonth()+1}/${curr.getDate()}/${curr.getFullYear()}`;
   const [todo, setTodo] = useState([]);
@@ -70,7 +71,7 @@ function App() {
         muted>
         <source src = {synthBackground} type="video/mp4"/>
       </video>
-       <h1>SynthDoer</h1> 
+       <h1 style={{}}>SynthDoer</h1> 
         <p>{date}</p>
         <TodoForm insertTodo={insertTodo} />
         <TodoList
