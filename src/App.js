@@ -12,10 +12,8 @@ import ReactPlayer from "react-player"
 function App() {
   //const resonance = new Audio(Resonance)
   //const playResonance = () =>{resonance.play()}
-  
-  
   const curr = new Date()
-  const date = `${curr.getMonth()+1}/${curr.getDate()}/${curr.getFullYear()}`;
+  const date = `${curr.getDate()}/${curr.getMonth()+1}/${curr.getFullYear()}`;
   const [todo, setTodo] = useState([]);
 
   useEffect(() => {
@@ -71,8 +69,8 @@ function App() {
         muted>
         <source src = {synthBackground} type="video/mp4"/>
       </video>
-       <h1 style={{}}>SynthDoer</h1> 
         <p>{date}</p>
+        <p>Your Todo List</p>
         <TodoForm insertTodo={insertTodo} />
         <TodoList
           todo={todo}
