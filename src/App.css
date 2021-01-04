@@ -1,7 +1,16 @@
 .App {
     text-align: center;
   }
-  
+ 
+  h1{
+    background: #55E7FF;
+    background: -webkit-linear-gradient(to bottom right, #55E7FF 20%, #00CCFD 40%, #FF34B3 60%, #2011A2 80%, #201148 100%);
+    background: -moz-linear-gradient(to bottom right, #55E7FF 20%, #00CCFD 40%, #FF34B3 60%, #2011A2 80%, #201148 100%);
+    background: linear-gradient(to bottom right, #55E7FF 20%, #00CCFD 40%, #FF34B3 60%, #2011A2 80%, #201148 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 150px;
+  }
   
 
   
