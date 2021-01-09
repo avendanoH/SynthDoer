@@ -1,7 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-
-// create synthwave button, complete, line-through using the synthw
+//import {Checkbox} from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles';
+import { green } from '@material-ui/core/colors';
+import Checkbox from "./Checkbox"
+// create synthwave button, complete, line-through using the synth
+// move stuff here to checkbox and make it work!
 
 
 const Button = styled.button`
@@ -13,13 +17,13 @@ const Button = styled.button`
   background-image: linear-gradient(to bottom, #ff34b3, #2980b9);
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
-  border-radius: 28px;
+  border-radius: 0px;
   font-family: Courier New;
   color: #ffffff;
   font-size: 12px;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
-
+  vertical-align:middle;
   &:hover {
     background: #3cb0fd;
     background-image: -webkit-linear-gradient(top, #3cb0fd, #ff34b3);
@@ -35,22 +39,23 @@ export default function Todo({ todo, removeTodo, toggleIsComplete }) {
     function handleRemClick() { removeTodo(todo.id) }
 
     function handleCompleteToggle() { toggleIsComplete(todo.id) }
-
-    return (
+       return (
         <div style={{ display: "flex" }}>
-            <input type="checkbox" onClick={handleCompleteToggle} />
-            <li
-                style={{
+            <label>
+                <Checkbox
+                checked={todo.isComplete}
+                onClick={handleCompleteToggle}
+                />
+                <span style={{ 
+                textDecoration: todo.isComplete ? "line-through" : null }}>
+{todo.title}
+                     </span>
+                
 
-                    textDecoration: todo.isComplete ? "line-through" : null
-                    
-                }}
 
-            >
-                {todo.title}
+             <Button onClick={handleRemClick}>X</Button>
 
-            </li>
-            <Button onClick={handleRemClick}>Done it</Button>
+            </label>
         </div>
     );
 }
